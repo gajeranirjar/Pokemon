@@ -1,5 +1,6 @@
 
 export const PokemonCards = ({ data }) => {
+    if (!data) return null;
     const { name, weight, height, base_experience, abilities, types, stats, image } = data;
     return (
         <article className="pokemon-card">
@@ -26,7 +27,7 @@ export const PokemonCards = ({ data }) => {
                 <div>
                     <span> Weight:</span> <p>{weight}</p>
                 </div>
-                
+
                 <div>
                     <span> Experience:</span>
                     <p>{base_experience}</p>

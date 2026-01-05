@@ -10,7 +10,7 @@ export default defineConfig({
       manifest: {
         name: 'Pokemon App',
         short_name: 'Pokemon 🎯',
-        description: 'Pokemon FFast Pokemon Finder built with React. Infinite scroll, offline support, and SEO optimized.',
+        description: 'Pokemon Fast Pokemon Finder built with React. Infinite scroll, offline support, and SEO optimized.',
         start_url: '/',
         display: 'standalone',
         theme_color: '#438d95',
