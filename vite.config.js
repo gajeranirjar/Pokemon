@@ -9,7 +9,7 @@ export default defineConfig({
       includeAssets: ['luxuryball-16.png', 'luxuryball-32.png', 'luxuryball-192.png', 'luxuryball-512.png'],
       manifest: {
         name: 'Pokemon App',
-        short_name: 'Pokemon 🎯',
+        short_name: 'Pokemon🎯',
         description: 'Pokemon Fast Pokemon Finder built with React. Infinite scroll, offline support, and SEO optimized.',
         start_url: '/',
         display: 'standalone',
