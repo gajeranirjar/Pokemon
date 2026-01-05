@@ -1,9 +1,8 @@
 import { useEffect, useState, useRef, useCallback } from "react";
 import "./index.css";
 import { PokemonCards } from "./PokemonCards";
-import { PokemonSkeleton } from "./PokemonSkeleton";
 
-const LIMIT = 500;
+const LIMIT = 450;
 const MAX_CACHE = 1500;
 
 export const Pokemon = () => {
@@ -33,6 +32,8 @@ export const Pokemon = () => {
   });
 
   const fetchPokemon = async () => {
+    console.log('fetchhhhh' , pokemon.length);
+    
     if (!hasMore || loading) return;
     setLoading(true);
     setError(false);
@@ -85,13 +86,14 @@ export const Pokemon = () => {
       const parsed = JSON.parse(cache);
       setPokemon(parsed);
       setPage(Math.floor(parsed.length / LIMIT));
-    } else {
+    } else {      
       fetchPokemon();
     }
   }, []);
 
   useEffect(() => {
-    if (page !== 0) fetchPokemon();
+    console.log("👌 ~ Pokemon ~ page:", page)
+    if (page !== 0 && page < 3) fetchPokemon();
   }, [page]);
 
   const lastPokemonRef = useCallback(
