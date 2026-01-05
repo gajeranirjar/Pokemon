@@ -32,8 +32,6 @@ export const Pokemon = () => {
   });
 
   const fetchPokemon = async () => {
-    console.log('fetchhhhh' , pokemon.length);
-    
     if (!hasMore || loading) return;
     setLoading(true);
     setError(false);
@@ -92,7 +90,6 @@ export const Pokemon = () => {
   }, []);
 
   useEffect(() => {
-    console.log("👌 ~ Pokemon ~ page:", page)
     if (page !== 0 && page < 3) fetchPokemon();
   }, [page]);
 
